@@ -21,7 +21,12 @@ module.exports = function() {
 
           if (existsSync(fileAbsPath)) {
             const rawMd = readFileSync(fileAbsPath, 'utf-8');
-            node.children = unified.parse(rawMd);
+            const parsed = unified.parse(rawMd);
+            if(node.data == null) {
+              node.data = {};
+            }
+            node.data.hName = 'div';
+            node.children = parsed.children;
           } else {
             throw new Error(
               `Unable to locate @import file in path: ${fileAbsPath}!`
