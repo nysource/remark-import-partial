@@ -1,9 +1,12 @@
 {
-  "name": "remark-import-partial",
-  "version": "0.0.1",
-  "main": "index.js",
-  "license": "MIT",
+  "bundleDependencies": false,
   "dependencies": {
     "unist-util-visit": "2.0.2"
-  }
+  },
+  "deprecated": false,
+  "description": "Populate `@import` syntax with partial files",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "remark-import-partial",
+  "version": "0.0.3"
 }
